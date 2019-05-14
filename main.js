@@ -6,6 +6,23 @@
 // features
 var g_interestedInFeatures = [
   'game_info',
+  'death',
+  'killer',
+  'knockedout',
+  'headshot',
+  'matchOutcome'
+  'roundEnd',
+  'roundOutcome',
+  'roundStart',
+  'phase',
+  'number',
+  'score',
+  'deaths',
+  'health',
+  'kills',
+  'roster',
+  'score',
+  'team',
   'match',
   'roster',
   'kill',
@@ -84,8 +101,8 @@ function setFeatures() {
   overwolf.games.events.setRequiredFeatures(g_interestedInFeatures, function(info) {
     if (info.status == "error")
     {
-      //console.log("Could not set required features: " + info.reason);
-      //console.log("Trying in 2 seconds");
+      console.log("Could not set required features: " + info.reason);
+      console.log("Trying in 2 seconds");
       window.setTimeout(setFeatures, 2000);
       return;
     }
